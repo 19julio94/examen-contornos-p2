@@ -31,11 +31,28 @@ public class Principal {
              * todos los numeros primos que hay desde el  hasta el 9999
              */
             //quitamos la variable contador y en el if ponemos la variable ndig ya que el funcionamiento será el mismo
-            if (numDigitos == dig) {
-                if (i < 4) {
-                    esPrimo = true;
+         if (numDigitos == dig) {
+                if (esPrimo(i)) {
+                    System.out.println(i);
+                
+                /**
+                 * en este if si la condicion se cumple pues nos mostrara por pantalla los numeros primos
+                 */
+                
+                }
+            }
+        }
+    }
+    /**
+     * Metodo que nod comprueba si es primo o no,en caso de ser si nos lo imprime por pantalla
+     * @param i
+     * @return 
+     */
+    public static boolean esPrimo(int i){
+    if (i < 4) {
+                    return true;
                 } else if (i % 2 == 0) {
-                    esPrimo = false;
+                    return false;
                 } else {
                     int contador1 = 0;
                     int i1 = 1;
@@ -55,17 +72,12 @@ public class Principal {
                     }
 
                     if (contador1 == 1) {
-                        esPrimo = true;
+                        return true;
                     }
-                }
-                /**
-                 * en este if si la condicion se cumple pues nos mostrara por pantalla los numeros primos
-                 */
-                if (esPrimo == true) {
-                    System.out.println(i);
-                }
-            }
-        }
+    
+    
+    return false;
     }
-
+    }
 }
+
