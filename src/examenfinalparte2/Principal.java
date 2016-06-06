@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Principal {
 
-    public static boolean p = false;
+    public static boolean esPrimo = false;
 
     public static void main(String arg[]) throws IOException {
 
@@ -25,9 +25,9 @@ public class Principal {
             //quitamos la variable contador y en el if ponemos la variable ndig ya que el funcionamiento será el mismo
             if (ndig == dig) {
                 if (i < 4) {
-                    p = true;
+                    esPrimo = true;
                 } else if (i % 2 == 0) {
-                    p = false;
+                    esPrimo = false;
                 } else {
                     int contador1 = 0;
                     int i1 = 1;
@@ -47,11 +47,11 @@ public class Principal {
                     }
 
                     if (contador1 == 1) {
-                        p = true;
+                        esPrimo = true;
                     }
                 }
 
-                if (p == true) {
+                if (esPrimo == true) {
                     System.out.println(i);
                 }
             }
