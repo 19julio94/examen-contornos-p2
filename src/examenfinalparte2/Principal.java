@@ -1,28 +1,30 @@
 
 package examenfinalparte2;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Principal {
 
     public static boolean p = false;
     
-    public static void main(String arg[])
+    public static void main(String arg[]) throws IOException
         {
-        int dig=2;
+        
         int ndig=0;
-        if(dig<=0)
+        
         System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
-        for(int i = 1; i <= 99999; i++ )
-        {
+        int dig=(new Scanner(System.in)).nextInt();
+        for(int i = 1; i <= 99999; i++ ){
             int aux = i;
  
-            int contador=0;
+            ndig=0;
  
-            while (aux != 0)
-        {
+            while (aux != 0){
             aux = aux / 10;
-            contador++;
+           ndig++;
         }
-        ndig=contador;
+        
             
             
             if(ndig==dig){
